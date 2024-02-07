@@ -1,22 +1,27 @@
-# AnimatedWave
+## AnimatedWave
 
-AnimatedWave is a React component that creates a customizable animated wave effect. It can be easily integrated into React applications to add visual interest.
+This React component brings life to your applications with stunning, customizable animated waves.
 
-## Installation
+### Installation
 
-You can install AnimatedWave via npm:
+Simply install it using npm:
 
-## bash
+```bash
 npm install animated-wave-react
+```
 
-Usage
-Import the AnimatedWave component and use it within your React components:
+### Usage
 
-javascript
-Copy code
+1. Import the component:
+
+```javascript
 import React from 'react';
 import AnimatedWave from 'animated-wave-react';
+```
 
+2. Use it in your component:
+
+```javascript
 const MyComponent = () => {
   return (
     <div>
@@ -33,10 +38,11 @@ const MyComponent = () => {
 };
 
 export default MyComponent;
-Apply CSS styles to customize the appearance of the wave effect:
+```
 
-css
-Copy code
+3. Apply CSS styles to customize the look:
+
+```css
 .wave {
   bottom: 0;
   width: 100%;
@@ -47,17 +53,21 @@ Copy code
 .wave polygon {
   fill: rgb(69, 132, 140);
 }
+```
 
-Props
-phase (number, optional): Phase of the wave (default: 10).
-amplitude (number, optional): Amplitude of the wave (default: 60).
-speed (number, optional): Speed of the wave animation (default: 10).
-frequency (number, optional): Frequency of the wave (default: 0.0005).
-color (string, optional): Color of the wave (default: '#00ffff').
-className (string, optional): Custom CSS class name for styling.
-License
-This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
+### Props
 
-This README provides basic information about installation, usage, available props, and licensing. Make sure to replace placeholders such as `animated-wave-react`, `MyComponent`, and update the content according to your package details. Additionally, if you have any specific instructions or additional features, you can include them in your README as well.
+- **phase (number, optional):** Controls the starting point of the wave (default: 10).
+- **amplitude (number, optional):** Adjusts the wave's height (default: 60).
+- **speed (number, optional):** Sets the animation speed (default: 10).
+- **frequency (number, optional):** Defines the wave's shape (default: 0.0005).
+- **color (string, optional):** Chooses the wave's color (default: '#00ffff').
+- **className (string, optional):** Allows custom CSS styling.
 
+### License
 
+This project is licensed under the GPL-3.0 License. See the `LICENSE` file for details.
+
+### Make it Yours
+
+This README provides a starting point. Remember to replace placeholders like `animated-wave-react` and `MyComponent` with your actual package details. Feel free to add more sections like "Examples" or "Contributing" to enhance your documentation!
