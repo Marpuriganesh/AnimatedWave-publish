@@ -19,10 +19,5 @@
   "license": "GPL-3.0",
   "dependencies": {
     "lodash.throttle": "^4.1.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0"
   }
 }
