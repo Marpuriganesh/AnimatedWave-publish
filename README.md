@@ -6,11 +6,12 @@ AnimatedWave is a React component that creates a customizable animated wave effe
 
 You can install AnimatedWave via npm:
 
-```bash
+## bash
 npm install animated-wave-react
 
-Usage
-Import the AnimatedWave component and use it within your React components:
+## Usage
+I
+mport the AnimatedWave component and use it within your React components:
 
 javascript
 Copy code
