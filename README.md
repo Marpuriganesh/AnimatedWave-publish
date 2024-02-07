@@ -107,6 +107,3 @@ This project is licensed under the GPL-3.0 License. See the `LICENSE` file for d
 ## Contributing
 
 We welcome contributions! Feel free to submit issues and pull requests to help improve this package.
-
----
-I've added a comment in the example section specifically explaining how users can use linear gradients as fill.
