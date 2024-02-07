@@ -16,5 +16,8 @@
     "Animations"
   ],
   "author": "Ganesh Marpuri",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "lodash.throttle": "^4.1.1"
+  }
 }

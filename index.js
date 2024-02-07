@@ -1,42 +1,46 @@
 import React, { useRef, useState, useEffect } from 'react';
+import throttle from 'lodash/throttle';
 
-const AnimatedWave = (props) => {
+const AnimatedWave = React.memo((props) => {
   const { phase = 10, amplitude = 60, speed = 10, frequency = 0.0005, className } = props;
   const myDivRef = useRef(null);
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [value, setValue] = useState(0);
 
   useEffect(() => {
     if (myDivRef.current) {
       const { offsetWidth, offsetHeight } = myDivRef.current;
-      setWidth(offsetWidth);
-      setHeight(offsetHeight);
+      setDimensions({ width: offsetWidth, height: offsetHeight });
     }
   }, []);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const updateValue = () => {
       setValue((prev) => prev + 0.01); // Increment the value
-    }, speed); // Increment every second (adjust as needed)
-
-    return () => clearInterval(intervalId); // Clean up on unmount
+    };
+    const throttledUpdate = throttle(updateValue, speed);
+    const intervalId = setInterval(throttledUpdate, speed);
+    return () => {
+      clearInterval(intervalId);
+      throttledUpdate.cancel();
+    };
   }, [speed]);
 
   const wavePath = (x) => {
-    const y = height / 1.5 + amplitude * Math.sin(2 * Math.PI * frequency * x + (phase + value));
+    const y = dimensions.height / 1.5 + amplitude * Math.sin(2 * Math.PI * frequency * x + (phase + value));
     return `${x} ${y}`;
   };
 
-  const points = Array.from({ length: width }, (_, i) => wavePath(i)).join(' ');
+  const points = Array.from({ length: dimensions.width }, (_, i) => wavePath(i)).join(' ');
 
   return (
-    <div style={{ display: 'inline-block', position: 'absolute' }} ref={myDivRef} className={className}>
-      <svg width={width} height={height}>
-        <polygon points={`0 ${height} ${points} ${width} ${height}`} fill={props.color || '#00ffff'} />
+    <div style={{ display: 'inline-block', position: 'absolute' }} ref={myDivRef} className={`${className} animated-wave`} aria-label="Animated wave">
+      <svg width={dimensions.width} height={dimensions.height}>
+        {props.children}
+        <path d={`M0 ${dimensions.height} ${points} L${dimensions.width} ${dimensions.height}`} fill={props.fill||'#000000'} />
       </svg>
     </div>
   );
-};
+});
 
 export default AnimatedWave;

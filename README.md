@@ -1,25 +1,29 @@
-## AnimatedWave
+Sure, I'll help you generate a proper README file for your npm package. Here's an updated version:
+
+---
+
+# Animated Wave React Component
 
 This React component brings life to your applications with stunning, customizable animated waves.
 
-### Installation
+## Installation
 
-Simply install it using npm:
+You can install the package via npm:
 
 ```bash
 npm install animated-wave-react
 ```
 
-### Usage
+## Usage
 
-1. Import the component:
+1. Import the component into your React application:
 
 ```javascript
 import React from 'react';
 import AnimatedWave from 'animated-wave-react';
 ```
 
-2. Use it in your component:
+2. Integrate it within your component:
 
 ```javascript
 const MyComponent = () => {
@@ -40,7 +44,7 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
-3. Apply CSS styles to customize the look:
+3. Customize the appearance with CSS:
 
 ```css
 .wave {
@@ -50,24 +54,56 @@ export default MyComponent;
   overflow: hidden;
 }
 
-.wave polygon {
+.wave path {
   fill: rgb(69, 132, 140);
 }
 ```
 
-### Props
+## Props
 
 - **phase (number, optional):** Controls the starting point of the wave (default: 10).
 - **amplitude (number, optional):** Adjusts the wave's height (default: 60).
 - **speed (number, optional):** Sets the animation speed (default: 10).
 - **frequency (number, optional):** Defines the wave's shape (default: 0.0005).
-- **color (string, optional):** Chooses the wave's color (default: '#00ffff').
+- **fill (string, optional):** Chooses the wave's fill color (default: '#000000').
 - **className (string, optional):** Allows custom CSS styling.
 
-### License
+## Examples
+
+Here are some examples of using the `AnimatedWave` component:
+
+```jsx
+<AnimatedWave
+  phase={101}
+  speed={5}
+  amplitude={25}
+  frequency={0.001}
+  className='test'
+  fill={`url(#waveGradient1)`}
+>
+  <defs>
+    <linearGradient id='waveGradient1' x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="50%" stopColor={"#13d1eb"} />
+      <stop offset="100%" stopColor={"#dff0e4"} />
+    </linearGradient>
+  </defs>
+</AnimatedWave>
+
+<AnimatedWave
+  phase={10}
+  amplitude={60}
+  speed={12}
+  frequency={0.0005}
+  className='test2'
+/>
+```
+
+## License
 
 This project is licensed under the GPL-3.0 License. See the `LICENSE` file for details.
 
-### Make it Yours
+## Contributing
 
-This README provides a starting point. Remember to replace placeholders like `animated-wave-react` and `MyComponent` with your actual package details. Feel free to add more sections like "Examples" or "Contributing" to enhance your documentation!
+We welcome contributions! Feel free to submit issues and pull requests to help improve this package.
+
+
