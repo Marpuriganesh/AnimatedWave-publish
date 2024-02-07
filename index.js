@@ -6,6 +6,22 @@ const AnimatedWave = React.memo((props) => {
   const myDivRef = useRef(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [value, setValue] = useState(0);
+  useEffect(() => {
+    const handleResize = () => {
+      // This function will be called whenever the window is resized
+      if (myDivRef.current) {
+        const { offsetWidth, offsetHeight } = myDivRef.current;
+        setDimensions({ width: offsetWidth, height: offsetHeight });
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      // Cleanup function to remove the event listener when component unmounts
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (myDivRef.current) {
