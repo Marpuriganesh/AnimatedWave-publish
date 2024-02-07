@@ -1,6 +1,6 @@
 {
   "name": "animated-wave-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple package to place a wave component",
   "main": "index.js",
   "scripts": {
