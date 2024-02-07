@@ -97,9 +97,9 @@ Here are some examples of using the `AnimatedWave` component:
   className='test2'
 />
 ```
-```
+
 ![alt text](image.png)
-```
+
 ## License
 
 This project is licensed under the GPL-3.0 License. See the `LICENSE` file for details.
