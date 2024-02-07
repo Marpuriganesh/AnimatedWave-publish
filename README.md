@@ -9,9 +9,8 @@ You can install AnimatedWave via npm:
 ## bash
 npm install animated-wave-react
 
-## Usage
-I
-mport the AnimatedWave component and use it within your React components:
+Usage
+Import the AnimatedWave component and use it within your React components:
 
 javascript
 Copy code
