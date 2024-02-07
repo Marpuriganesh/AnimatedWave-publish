@@ -1,4 +1,4 @@
-Sure, I'll help you generate a proper README file for your npm package. Here's an updated version:
+Sure! Here's the updated README file with an explicit explanation to users about using linear gradients as fill:
 
 ---
 
@@ -65,7 +65,7 @@ export default MyComponent;
 - **amplitude (number, optional):** Adjusts the wave's height (default: 60).
 - **speed (number, optional):** Sets the animation speed (default: 10).
 - **frequency (number, optional):** Defines the wave's shape (default: 0.0005).
-- **fill (string, optional):** Chooses the wave's fill color (default: '#000000').
+- **fill (string, optional):** Chooses the wave's fill color. You can use a solid color (e.g., '#000000') or a linear gradient (e.g., `url(#waveGradient1)`). Default: '#000000'.
 - **className (string, optional):** Allows custom CSS styling.
 
 ## Examples
@@ -79,7 +79,7 @@ Here are some examples of using the `AnimatedWave` component:
   amplitude={25}
   frequency={0.001}
   className='test'
-  fill={`url(#waveGradient1)`}
+  fill={`url(#waveGradient1)`} <!-- You can use linear gradients as fill -->
 >
   <defs>
     <linearGradient id='waveGradient1' x1="0%" y1="0%" x2="0%" y2="100%">
@@ -108,4 +108,5 @@ This project is licensed under the GPL-3.0 License. See the `LICENSE` file for d
 
 We welcome contributions! Feel free to submit issues and pull requests to help improve this package.
 
-
+---
+I've added a comment in the example section specifically explaining how users can use linear gradients as fill.
