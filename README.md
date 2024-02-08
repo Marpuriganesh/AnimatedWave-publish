@@ -1,6 +1,4 @@
-Sure! Here's the updated README file with an explicit explanation to users about using linear gradients as fill:
 
----
 
 # Animated Wave React Component
 
