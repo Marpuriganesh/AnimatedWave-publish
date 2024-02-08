@@ -1,5 +1,8 @@
-import useCountry from "./hooks/useCountry";
 
 
+// Import your React components
+import AnimatedWave from './components/AnimatedWave';
 
-export{useCountry};
+// Export your components
+export {AnimatedWave};
+

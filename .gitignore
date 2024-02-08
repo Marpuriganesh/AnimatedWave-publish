@@ -2,3 +2,4 @@
 rollup.config.js
 /.vscode
 /dist
+/.yarn

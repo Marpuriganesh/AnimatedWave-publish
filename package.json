@@ -1,12 +1,12 @@
 {
   "name": "components",
-  "version": "1.0.0",
-  "type":"module",
+  "version": "1.0.8",
+  "type": "module",
   "description": "This is a NPM for some custom made react components",
   "main": "dist/index.js",
   "scripts": {
-    "build:dev":"rollup -c --environment NODE_ENV:development",
-    "build":"rollup -c --environment NODE_ENV:production"
+    "build": "rollup -c ",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -27,10 +27,20 @@
   },
   "homepage": "https://github.com/Marpuriganesh/react-components#readme",
   "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash.throttle": "^4.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@svgr/rollup": "^8.1.0",
     "rollup": "^4.9.6",
     "rollup-plugin-terser": "^7.0.2"
   }
